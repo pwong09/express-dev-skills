@@ -1,0 +1,26 @@
+// fake database 
+const skills = [
+    {skillName: 'JavaScript', experience: 'beginner', certified: true},
+    {skillName: 'HTML', experience: 'beginner', certified: true},
+    {skillName: 'CSS', experience: 'beginner', certified: true},
+    {skillName: 'Python', experience: 'intermediate', certified: true},
+    {skillName: 'C++', experience: 'beginner', certified: true},
+    {skillName: 'PostgreSQL', experience: 'beginner', certified: true},
+    {skillName: 'Google Suite', experience: 'advanced', certified: false},
+    {skillName: 'Microsoft Office', experience: 'advanced', certified: false},
+]
+
+module.exports = {
+    getAll,
+    getOne
+}
+
+
+function getAll() {
+    return skills;
+}
+
+function getOne(id) {
+    // Use the Array.prototype.find iterator method
+    return skills.find(skill => skill.skillName === id);
+}
