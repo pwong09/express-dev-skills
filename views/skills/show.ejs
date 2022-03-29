@@ -11,7 +11,9 @@
     <h1>Skill: <%= skillName %></h1>
     <h3>Experience Level: <%= skill.experience %></h3>
     <h3>Certified: <%= (skill.certified) ? 'Yes' : 'No' %></h3>
-    <a class="button" href="/skills">Delete Skill</a>
+    <form action="/skills/<%= skillName %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Skill</button>
+    </form>
     <br>
     <a class="button" href="/skills">Back</a>
 </body>

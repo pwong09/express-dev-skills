@@ -13,7 +13,8 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
 }
 
 
@@ -29,4 +30,10 @@ function create(skill){
     skill.experience = 'beginner';
     skill.certified = false;
     skills.push(skill)
+}
+
+function deleteOne(id){
+    console.log(`deleting ${id}`);
+    const idx = skills.findIndex(skill => skill.skillName === id);
+    skills.splice(idx, 1);
 }

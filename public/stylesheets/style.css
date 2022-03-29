@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px; 
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -18,4 +19,14 @@ a.button{
   border-radius: 5px;
   background-color: #d82a5f;
   color: white;
+}
+button {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 5px;
+  background-color:  #5b0e25;
+  color: white;
+  font-size: 14px;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
