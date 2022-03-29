@@ -12,7 +12,8 @@ const skills = [
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 }
 
 
@@ -23,4 +24,9 @@ function getAll() {
 function getOne(id) {
     // Use the Array.prototype.find iterator method
     return skills.find(skill => skill.skillName === id);
+}
+function create(skill){
+    skill.experience = 'beginner';
+    skill.certified = false;
+    skills.push(skill)
 }

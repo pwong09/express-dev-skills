@@ -2,7 +2,9 @@ const Skill = require('../models/skill');
 
 module.exports = {
     index,
-    show
+    show,
+    new: newSkill,
+    create
 }
 
 function index(req, res) {
@@ -18,4 +20,15 @@ function show(req, res) {
         skill: Skill.getOne(req.params.id),
         title: 'Pearl\'s Express Skills Lab'
     });
+}
+
+function newSkill(req, res){
+    res.render('skills/new', {
+        title: 'Pearl\'s Express Skills Lab'
+    });
+}
+function create(req, res){
+    console.log(req.body);
+    Skill.create(req.body)
+    res.redirect('/skills');
 }
