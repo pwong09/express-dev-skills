@@ -1,9 +1,22 @@
 body {
-  padding: 50px;
+  height: 100vh;
+  padding: 20px;
   font-size: 14px; 
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+h1 {
+  text-align: center;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+}
 a {
   color: #d82a5f;
   text-decoration: none;
@@ -13,12 +26,16 @@ a:hover {
   text-decoration: none;
 }
 a.button{
+  margin: 10px;
+  width: 100px;
   display: inline-block;
   border: 1px solid white;
   padding: 8px;
   border-radius: 5px;
   background-color: #d82a5f;
   color: white;
+  text-align: center;
+  font-size: 14px;
 }
 button {
   display: inline-block;
