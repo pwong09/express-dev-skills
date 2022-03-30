@@ -9,9 +9,8 @@
 </head>
 <body>
     <h1>Edit <%= skillName %></h1>
-    <form action="/skills/<%= skillName %>?_method=PUT" method="PUT">
-        <input type="text" name="skill" value="<%=
-        skillName%>">
+    <form action="/skills/<%= skillName %>?_method=PUT" method="POST">
+        <input type="text" name="<%= skillName %>" value="<%= skillName%>">
         <button type="submit">Edit Skill</button>
     </form>
     <a class="button" href="/skills">Back</a>

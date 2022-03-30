@@ -38,6 +38,14 @@ function deleteOne(id){
     skills.splice(idx, 1);
 }
 
-function editOne(skill){
-    skill.skillName
+function editOne(oldSkillName, skill){
+    //skill is req.body which is an object {oldSkillName: newSkillName}
+    //need to edit the correct skillName 
+    console.log(`new skill name ${skill[oldSkillName]}`);
+    console.log(`old skill name ${oldSkillName}`);
+    skills.find(s => {
+        if (s.skillName === oldSkillName) s.skillName = skill[oldSkillName];
+        console.log(s.skillName);
+    });
+    
 }

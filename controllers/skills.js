@@ -41,7 +41,7 @@ function deleteSkill(req, res){
     res.redirect('/skills');
 }
 
-function edit(req,res){
+function edit(req, res){
     res.render('skills/edit', {
         skillName: req.params.id,
         skill: Skill.getOne(req.params.id),
@@ -49,6 +49,9 @@ function edit(req,res){
     });
 }
 function updateSkill(req, res){
-    Skill.editOne(req.body)
+    //how to get the original skillName id? 
+    console.log(req.body) // logs out an object {skill: 'input'}
+    console.log(req.params.id)
+    Skill.editOne(req.params.id, req.body),
     res.redirect('/skills');
 }
