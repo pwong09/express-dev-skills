@@ -73,3 +73,6 @@ Summary of setup:
 #### Screenshots
 ![delete a skill](/screenshots/part-2-delete.png "delete the skill")
 ![skill removed from list](/screenshots/part-2-skill-deleted.png "skill has been removed from the list")
+
+### Resources
+[RESTful Routes to CRUD Mapping Guide](https://gist.github.com/jim-clark/17908763db7bd3c403e6)
