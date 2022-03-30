@@ -56,7 +56,7 @@ Summary of setup:
 2. no new UI - form submission added to show.ejs
 3. route - router.put('/:id', skillsCtrl.update)
 4. controller - function update - Skill.editOne(req.params.id, req.body)
-5. model - function editOne takes req.params.id and req.body to update the old skillName with new input
+5. model - function editOne takes req.params.id and req.body to update the old skillName with new input, experience level checkboxes, and certified checkbox
 
 #### Screenshots
 ![edit the skill](/screenshots/part-2-edit-skill.png "edit the skill name")
