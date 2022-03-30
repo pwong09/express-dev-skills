@@ -49,9 +49,6 @@ function edit(req, res){
     });
 }
 function updateSkill(req, res){
-    //how to get the original skillName id? 
-    console.log(req.body) // logs out an object {skill: 'input'}
-    console.log(req.params.id)
     Skill.editOne(req.params.id, req.body),
     res.redirect('/skills');
 }

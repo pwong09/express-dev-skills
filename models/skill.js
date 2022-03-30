@@ -39,13 +39,18 @@ function deleteOne(id){
 }
 
 function editOne(oldSkillName, skill){
-    //skill is req.body which is an object {oldSkillName: newSkillName}
-    //need to edit the correct skillName 
     console.log(`new skill name ${skill[oldSkillName]}`);
     console.log(`old skill name ${oldSkillName}`);
     skills.find(s => {
         if (s.skillName === oldSkillName) s.skillName = skill[oldSkillName];
-        console.log(s.skillName);
+        if (skill.beginner) {
+            s.experience = 'beginner'
+        } else if (skill.intermediate) {
+            s.experience = 'intermediate'
+        } else if (skill.advanced) {
+            s.experience = 'advanced'
+        }
+        if (skill.certified) s.certified = true;
     });
     
 }

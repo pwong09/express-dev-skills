@@ -10,10 +10,22 @@
 <body>
     <h1>Edit <%= skillName %></h1>
     <form action="/skills/<%= skillName %>?_method=PUT" method="POST">
-        <input type="text" name="<%= skillName %>" value="<%= skillName%>">
+        Edit skill name: <input type="text" name="<%= skillName %>" value="<%= skillName%>" />
+        <br>
+        <br>
+        Experience Level:
+        <br>
+        beginner <input type="checkbox" name="beginner"/>
+        intermediate <input type="checkbox" name="intermediate"/>
+        advanced <input type="checkbox" name="advanced"/>
+        <br>
+        <br>
+        Certified?
+        <input type="checkbox" name="certified" />
+        <br>
         <button type="submit">Edit Skill</button>
     </form>
-    <a class="button" href="/skills">Back</a>
+    <a class="button" href="/skills/<%= skillName %>">Back</a>
     <br>
     <a class="button" href="/">Home</a>
 </body>
