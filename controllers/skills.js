@@ -5,7 +5,9 @@ module.exports = {
     show,
     new: newSkill,
     create,
-    delete: deleteSkill
+    delete: deleteSkill,
+    edit,
+    update: updateSkill
 }
 
 function index(req, res) {
@@ -36,5 +38,17 @@ function create(req, res){
 
 function deleteSkill(req, res){
     Skill.deleteOne(req.params.id);
+    res.redirect('/skills');
+}
+
+function edit(req,res){
+    res.render('skills/edit', {
+        skillName: req.params.id,
+        skill: Skill.getOne(req.params.id),
+        title: 'Pearl\'s Express Skills Lab'
+    });
+}
+function updateSkill(req, res){
+    Skill.editOne(req.body)
     res.redirect('/skills');
 }

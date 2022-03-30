@@ -8,14 +8,14 @@
     <title><%= title %></title>
 </head>
 <body>
-    <h1>Skill: <%= skillName %></h1>
-    <h3>Experience Level: <%= skill.experience %></h3>
-    <h3>Certified: <%= (skill.certified) ? 'Yes' : 'No' %></h3>
-    <form action="/skills/<%= skillName %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Skill</button>
+    <h1>Edit <%= skillName %></h1>
+    <form action="/skills/<%= skillName %>?_method=PUT" method="PUT">
+        <input type="text" name="skill" value="<%=
+        skillName%>">
+        <button type="submit">Edit Skill</button>
     </form>
-    <a class="button" href="/skills/<%= skillName %>/edit">Edit Skill</a>
-    <br>
     <a class="button" href="/skills">Back</a>
+    <br>
+    <a class="button" href="/">Home</a>
 </body>
 </html>
